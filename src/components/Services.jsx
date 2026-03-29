@@ -1,26 +1,50 @@
-import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 
 const services = [
   {
     title: 'Web Design',
-    description: 'Premium, conversion-focused websites that feel clean, intuitive, and unmistakably professional.',
+    description:
+      'Conversion-focused websites designed to feel clean, intuitive, and built to turn traffic into customers.',
   },
   {
     title: 'SEO',
-    description: 'Technical and on-page optimization to improve search visibility and attract qualified traffic.',
+    description:
+      'Technical and on-page optimisation to improve visibility, rankings, and attract qualified traffic.',
   },
   {
     title: 'System Integration',
-    description: 'Bring your tools together with reliable integrations that reduce friction and data silos.',
+    description:
+      'Connect your systems and tools to remove friction, improve data flow, and support scalable growth.',
   },
   {
     title: 'Automation',
-    description: 'Streamline repetitive operations with practical automations that save time every week.',
+    description:
+      'Practical automations that reduce manual work, improve consistency, and save time every week.',
   },
   {
-    title: 'Testing',
-    description: 'Fully testing and repoting on bug fixes.',
+    title: 'Data Structuring',
+    description:
+      'Organise and structure your data for better reporting, cleaner integrations, and smarter decisions.',
+  },
+  {
+    title: 'Website Rebuilds',
+    description:
+      'Rebuild outdated websites with a modern structure, improved UX, and stronger conversion performance.',
+  },
+  {
+    title: 'Testing & QA',
+    description:
+      'Thorough testing and clear reporting to identify issues, validate fixes, and ensure everything works properly.',
+  },
+  {
+    title: 'Hosting Setup',
+    description:
+      'Fast, secure hosting setup and optimisation focused on performance, reliability, and scalability.',
+  },
+  {
+    title: 'Support',
+    description:
+      'Ongoing support to keep your website stable, secure, and performing as your business evolves.',
   },
 ];
 
@@ -30,23 +54,22 @@ export default function Services() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Services"
-          title="Strategic support for your digital foundation"
-          description="Designed to simplify complexity while elevating your online presence and operational efficiency."
+          title="Web, data and systems built for growth"
+          description="Designed to simplify complexity, improve performance, and connect the parts of your business that matter."
         />
+
         <div className="grid gap-5 sm:grid-cols-2">
           {services.map((service, index) => (
-            <motion.article
+            <article
               key={service.title}
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.45, delay: index * 0.08 }}
-              whileHover={{ y: -6 }}
-              className="rounded-2xl border border-[#dbcfc2] bg-[#fdf9f5] p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg"
+              className="group rounded-2xl border border-[#dbcfc2] bg-[#fdf9f5] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fadeUp"
+              style={{ animationDelay: `${index * 80}ms` }}
             >
-              <h3 className="mb-3 text-xl font-semibold text-[#2f2721]">{service.title}</h3>
+              <h3 className="mb-3 text-xl font-semibold text-[#2f2721]">
+                {service.title}
+              </h3>
               <p className="text-[#5d4d42]">{service.description}</p>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>
