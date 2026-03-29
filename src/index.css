@@ -37,3 +37,27 @@ body {
   opacity: 0;
   animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+/* Smooth default for everything */
+* {
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Reusable animation class */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+}
+
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Slight hover lift */
+.hover-lift {
+  transform: translateY(0) scale(1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px) scale(1.03);
+}
