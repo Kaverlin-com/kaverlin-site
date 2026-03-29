@@ -12,29 +12,20 @@ function Hero() {
   return (
     <section className="relative z-0 overflow-hidden px-6 pt-24 pb-20 md:pt-32 md:pb-28">
 
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-20">
-        <img
-          src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop"
-          alt=""
-          loading="eager"
-          className="h-full w-full object-cover opacity-[0.25] blur-[1px] scale-105"
-        />
-      </div>
+    {/* Base background */}
+<div className="absolute inset-0 -z-20 bg-[#f8f3ed]" />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(185,161,136,0.35),_transparent_55%)]" />
+{/* Soft gradient depth */}
+<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(185,161,136,0.25),transparent_60%)]" />
 
-      {/* Glow Effect */}
-      <div className="absolute -top-40 right-[-10%] -z-10 h-[500px] w-[500px] rounded-full bg-[#d8c3a5]/30 blur-[120px]" />
+{/* Secondary gradient */}
+<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_80%_60%,rgba(120,140,130,0.15),transparent_60%)]" />
 
-      <div className="mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="max-w-3xl"
-        >
+{/* Subtle grid (systems feel) */}
+<div className="absolute inset-0 -z-10 opacity-[0.05] bg-[linear-gradient(to_right,#2b241f_1px,transparent_1px),linear-gradient(to_bottom,#2b241f_1px,transparent_1px)] bg-[size:120px_120px]" />
+
+{/* Optional glow (keep, but tone it down slightly) */}
+<div className="absolute -top-40 right-[-10%] -z-10 h-[500px] w-[500px] rounded-full bg-[#d8c3a5]/20 blur-[120px]" />
           {/* Tag */}
           <p className="mb-6 inline-flex rounded-full border border-[#cebcae] bg-[#f6efe7] px-4 py-2 text-xs tracking-[0.16em] text-[#6d5d52] uppercase">
             Digital Systems Studio
