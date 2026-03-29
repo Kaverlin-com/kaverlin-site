@@ -42,12 +42,12 @@ function Hero() {
 
           {/* Heading */}
           <h1 className="text-4xl font-semibold tracking-tight text-[#2f2721] sm:text-5xl md:text-6xl">
-            Clarity, Built Into Your Business
+            Websites, Data and Systems Built for Growth
           </h1>
 
           {/* Subtext */}
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#5d4d42] md:text-xl">
-            We design modern websites, strengthen your SEO foundation, and automate repetitive workflows with connected digital systems that support long-term growth.
+            Modern websites, stronger SEO, and connected systems that automate and support long-term growth.
           </p>
 
           {/* CTA */}
