@@ -18,6 +18,10 @@ const services = [
     title: 'Automation',
     description: 'Streamline repetitive operations with practical automations that save time every week.',
   },
+  {
+    title: 'Testing',
+    description: 'Fully testing and repoting on bug fixes.',
+  },
 ];
 
 export default function Services() {
